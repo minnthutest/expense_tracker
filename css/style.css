@@ -1,0 +1,19 @@
+/* style.css */
+body {
+    background-color: #f9f9f9;
+    font-family: "Segoe UI", sans-serif;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+.stButton>button {
+    background-color: #27ae60;
+    color: white;
+    font-weight: bold;
+}
+
+.stTextInput>div>input {
+    background-color: #ecf0f1;
+}
