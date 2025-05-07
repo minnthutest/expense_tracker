@@ -3,8 +3,17 @@ import sqlite3
 import pandas as pd
 
 # Setup
-conn = sqlite3.connect('expenses.db', check_same_thread=False)
-c = conn.cursor()
+import os
+
+if 'streamlit' in os.environ.get('HOME', ''):
+    DB_PATH = os.path.join('/tmp', 'expenses.db')
+else:
+    DB_PATH = 'expenses.db'
+
+conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+c = conn.cursor()  # ← this line is missing
+
+
 
 def create_table():
     c.execute('''
